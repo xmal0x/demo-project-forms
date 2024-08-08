@@ -13,7 +13,8 @@ const PersonalDataPage = () => {
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const { phone, firstName, lastName, gender } = formData.personalData;
-        if (!phone || !firstName || !lastName || !gender) {
+        console.log()
+        if (!phone || phone.length < 12 || !firstName || !lastName || !gender) {
             setError(true);
         } else {
             setError(false);
